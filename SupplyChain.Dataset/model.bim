@@ -1,0 +1,855 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.126.1261.0 (24.02)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"dim_customers\",\"dim_date\",\"dim_products\",\"dim_targets_orders\",\"fact_order_lines\",\"fact_orders_aggregate\",\"_Measure\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "2769d8e0-4b55-4771-b7d9-1509575b29e2",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "customer_id",
+        "fromTable": "dim_targets_orders",
+        "toColumn": "customer_id",
+        "toTable": "dim_customers"
+      },
+      {
+        "name": "f3a028c4-ba5c-4d11-ba16-aaec65dbff34",
+        "fromColumn": "customer_id",
+        "fromTable": "fact_order_lines",
+        "toColumn": "customer_id",
+        "toTable": "dim_customers"
+      },
+      {
+        "name": "62ff033e-b9e9-41ee-82b7-9b44074ab874",
+        "fromColumn": "product_id",
+        "fromTable": "fact_order_lines",
+        "toColumn": "product_id",
+        "toTable": "dim_products"
+      },
+      {
+        "name": "6c8160f4-652a-4f22-898f-7dfea92f9b39",
+        "fromColumn": "customer_id",
+        "fromTable": "fact_orders_aggregate",
+        "toColumn": "customer_id",
+        "toTable": "dim_customers"
+      },
+      {
+        "name": "169b8437-2360-4a8d-bfba-002c68bfcf0d",
+        "fromColumn": "order_id",
+        "fromTable": "fact_order_lines",
+        "isActive": false,
+        "toColumn": "order_id",
+        "toTable": "fact_orders_aggregate"
+      },
+      {
+        "name": "555c90a4-637f-437f-9f8c-89ccf3ec9911",
+        "fromColumn": "order_placement_date",
+        "fromTable": "fact_orders_aggregate",
+        "toColumn": "date",
+        "toTable": "dim_date"
+      },
+      {
+        "name": "e91e9fef-2afe-4178-93b5-c014aa2072aa",
+        "fromColumn": "agreed_delivery_date",
+        "fromTable": "fact_order_lines",
+        "toColumn": "date",
+        "toTable": "dim_date"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "dim_customers",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9a3c854a-3cd6-41d8-90d9-c146b52e20e1",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1bdbedfa-2fe3-43e4-b4b0-71a9f37abed3",
+            "sourceColumn": "customer_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "306e7d54-cab0-4431-9c24-4d57ed2d4381",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "99b28069-e662-4a68-af5a-d51195fe14e1",
+        "partitions": [
+          {
+            "name": "dim_customers",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\dim_customers.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"customer_id\", Int64.Type}, {\"customer_name\", type text}, {\"city\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "68558bec-a724-47b6-827f-731ee1302030",
+            "sourceColumn": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mmm_yy",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "8e987f4c-840f-4114-8cd0-666e3e11b8ad",
+            "sourceColumn": "mmm_yy",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "week_no",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ebbb4748-55d5-49c7-8144-27ba5cb19c6b",
+            "sourceColumn": "week_no",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3424feac-9249-4881-abfe-761436386749",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "65b525a3-a9f3-4a99-ae68-caff52a93f14",
+            "sourceColumn": "Month Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3b52e0f1-04ef-43f9-822f-59cbf418d6f1",
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\dim_date.csv\"),[Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"date\", type date}, {\"mmm_yy\", type date}, {\"week_no\", type text}}),",
+                "    #\"Inserted Year\" = Table.AddColumn(#\"Changed Type\", \"Year\", each Date.Year([date]), Int64.Type),",
+                "    #\"Inserted Month Name\" = Table.AddColumn(#\"Inserted Year\", \"Month Name\", each Date.MonthName([date]), type text)",
+                "in",
+                "    #\"Inserted Month Name\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_products",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "product_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "644d147e-1608-4c0e-8dc1-7e1d687ed804",
+            "sourceColumn": "product_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9c166d96-1805-4872-b4bb-872e25b09b2c",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0976f3ac-aa7c-4405-bdac-3eb5071c9afd",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2fec89d3-d01c-4d03-9861-718bcfbc0082",
+        "partitions": [
+          {
+            "name": "dim_products",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\dim_products.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"product_name\", type text}, {\"product_id\", Int64.Type}, {\"category\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_targets_orders",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f2648c8a-58f7-4d91-ab65-1e0e36abe731",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ontime_target%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8bd9481c-9ce6-4386-a8ca-0e64e75ad24d",
+            "sourceColumn": "ontime_target%",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "infull_target%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "82147e1a-dd5f-4be8-b057-3758964ffe3c",
+            "sourceColumn": "infull_target%",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "otif_target%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "52d6ea8d-a997-456d-99fb-7bc7f1b18753",
+            "sourceColumn": "otif_target%",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "8b932551-9b2f-475d-aaa4-daa45364e8e1",
+        "partitions": [
+          {
+            "name": "dim_targets_orders",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\dim_targets_orders.csv\"),[Delimiter=\",\", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"customer_id\", Int64.Type}, {\"ontime_target%\", Int64.Type}, {\"infull_target%\", Int64.Type}, {\"otif_target%\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_order_lines",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "order_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f52e8414-ab39-4da5-bacf-c74ba90bc359",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_placement_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "d0051054-792f-4076-bcc7-ad22d0bca941",
+            "sourceColumn": "order_placement_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "8f84de9c-7783-4798-aca9-7dd7205e677d",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "a84d6180-55ff-474d-9c55-304d3dac80c2",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_qty",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "efc8cfc3-9e0c-406d-a363-0c2d498402c5",
+            "sourceColumn": "order_qty",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "agreed_delivery_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "517bebfa-cf5f-46ac-8879-286d6f448d6a",
+            "sourceColumn": "agreed_delivery_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "actual_delivery_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "3dda2e5b-0dce-4c88-9b4d-cd984af1586a",
+            "sourceColumn": "actual_delivery_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delivery_qty",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0039e579-c4b1-41ef-aec2-45e077bfe614",
+            "sourceColumn": "delivery_qty",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "In Full",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d796f5ea-7c06-42aa-809e-161e61a6fd57",
+            "sourceColumn": "In Full",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "On Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1f42e549-4f66-4dd9-a4f5-2539df35217f",
+            "sourceColumn": "On Time",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "On Time In Full",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aea57025-7228-4f43-a50f-82b9b50b31bc",
+            "sourceColumn": "On Time In Full",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "0dd25096-dff5-46fb-a383-46296d5c36b0",
+        "partitions": [
+          {
+            "name": "fact_order_lines",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\fact_order_lines.csv\"),[Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"order_id\", type text}, {\"order_placement_date\", type date}, {\"customer_id\", Int64.Type}, {\"product_id\", Int64.Type}, {\"order_qty\", Int64.Type}, {\"agreed_delivery_date\", type date}, {\"actual_delivery_date\", type date}, {\"delivery_qty\", Int64.Type}, {\"In Full\", Int64.Type}, {\"On Time\", Int64.Type}, {\"On Time In Full\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fact_orders_aggregate",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "order_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "280a9276-328c-4d3e-92ff-b48c4ed0e868",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "9509bbf9-d1db-4c1b-b61b-652fd31d4a9f",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_placement_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "b906cb5b-6682-4b6f-8b04-3868687dc991",
+            "sourceColumn": "order_placement_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "on_time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "91e1013e-b7d0-43ba-bd36-1121c4b74316",
+            "sourceColumn": "on_time",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "in_full",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "03cb08fa-f1c1-490c-8d2c-458a1a427e02",
+            "sourceColumn": "in_full",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "otif",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e094a559-bda5-4819-80ee-46cb3d6db823",
+            "sourceColumn": "otif",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b5ef97ba-4cbe-45c5-8330-b04c10d5df4e",
+        "partitions": [
+          {
+            "name": "fact_orders_aggregate",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\LITON\\MiS-ME\\EnglishLearning\\datasolution360.Com\\Team-Project\\SupplyChain\\SupplyChainProject\\fact_orders_aggregate.csv\"),[Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"order_id\", type text}, {\"customer_id\", Int64.Type}, {\"order_placement_date\", type date}, {\"on_time\", Int64.Type}, {\"in_full\", Int64.Type}, {\"otif\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "_Measure",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "a24c5b9f-dbf3-4653-83d7-ebe1a71bffbb",
+        "measures": [
+          {
+            "name": "Total Order Line",
+            "expression": [
+              "",
+              "    DISTINCTCOUNT(fact_order_lines[order_id])"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "34846f4d-8267-4d33-b821-ac6a58b23b83"
+          },
+          {
+            "name": "Total_orders",
+            "expression": [
+              "",
+              "    DISTINCTCOUNT(fact_orders_aggregate[order_id])"
+            ],
+            "formatString": "0",
+            "lineageTag": "fc015d30-bcb9-4993-94d9-28719ac5c071"
+          },
+          {
+            "name": "OnTime_Orders",
+            "expression": [
+              "",
+              "    SUM(fact_orders_aggregate[on_time])"
+            ],
+            "formatString": "0",
+            "lineageTag": "83f71703-df9d-437d-a8d7-277ddb6ed509"
+          },
+          {
+            "name": "InFull_Orders",
+            "expression": [
+              "",
+              "    SUM(fact_orders_aggregate[in_full])"
+            ],
+            "formatString": "0",
+            "lineageTag": "392dc509-250a-44ed-a1cc-c61ed1cdb549"
+          },
+          {
+            "name": "OnTimeInFull_Orders",
+            "expression": [
+              "",
+              "    SUM(fact_orders_aggregate[otif])"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "615c8893-69e3-42c6-a337-fb541ae1907d"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_Measure",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

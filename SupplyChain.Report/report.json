@@ -1,0 +1,96 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"04c3f188e041acebf078\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1075.2,\"y\":312.8888888888889,\"z\":1000,\"width\":204.8,\"height\":71.11111111111111,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_date.Month Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month Name\"},\"Name\":\"dim_date.Month Name\",\"NativeReferenceName\":\"Month Name\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-03-22T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-08-22T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"Filter0438fefdffc11e285dee\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_date\"}},\"Property\":\"Year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 71.11,
+          "width": 204.80,
+          "x": 1075.20,
+          "y": 312.89,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2ba7275a1223e1a85de2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.440000000000005,\"y\":132.48000000000002,\"z\":5000,\"width\":161.28,\"height\":109.44,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.Total_orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"},\"Name\":\"_Measure.Total_orders\",\"NativeReferenceName\":\"Total_orders\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 109.44,
+          "width": 161.28,
+          "x": 37.44,
+          "y": 132.48,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"4d0763692f77859f2ed4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":233.28,\"y\":5.76,\"z\":7000,\"width\":207.36,\"height\":97.92,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.InFull_Delivery\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"InFull_Orders\"},\"Name\":\"_Measure.InFull_Delivery\",\"NativeReferenceName\":\"Total Orders In Full\"}]},\"autoSelectVisualType\":true,\"columnProperties\":{\"_Measure.InFull_Delivery\":{\"displayName\":\"Total Orders In Full\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 97.92,
+          "width": 207.36,
+          "x": 233.28,
+          "y": 5.76,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"9961b5f95b4a1d155475\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.56,\"y\":11.52,\"z\":2000,\"width\":164.16,\"height\":120.96000000000001,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"_Measure.Total Order Line\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Order Line\"},\"Name\":\"_Measure.Total Order Line\",\"NativeReferenceName\":\"Total Order Line\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total Order Line\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 120.96,
+          "width": 164.16,
+          "x": 34.56,
+          "y": 11.52,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"9bc1bdb67853de607aed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":247.68,\"y\":149.76000000000002,\"z\":6000,\"width\":178.56,\"height\":115.2,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.Delivery_OnTime\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"OnTime_Orders\"},\"Name\":\"_Measure.Delivery_OnTime\",\"NativeReferenceName\":\"Total Orders On Time\"}]},\"autoSelectVisualType\":true,\"columnProperties\":{\"_Measure.Delivery_OnTime\":{\"displayName\":\"Total Orders On Time\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 115.20,
+          "width": 178.56,
+          "x": 247.68,
+          "y": 149.76,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"ca3a412c3fa7d9d50e40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1050.050933786078,\"y\":103.90492359932088,\"z\":0,\"width\":204.1426146010187,\"height\":70.89983022071307,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_date.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"},\"Name\":\"dim_date.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-03-22T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2024-08-22T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2022L\"}}]]}}}]}}}}]}}}",
+          "filters": "[{\"name\":\"Filter0438fefdffc11e285dee\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_date\"}},\"Property\":\"Year\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 70.90,
+          "width": 204.14,
+          "x": 1050.05,
+          "y": 103.90,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"edca75dfe8140e395e2b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":247.68,\"y\":279.36,\"z\":8000,\"width\":192.96,\"height\":103.68,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.OnTimeInFull_Orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"OnTimeInFull_Orders\"},\"Name\":\"_Measure.OnTimeInFull_Orders\",\"NativeReferenceName\":\"OnTimeInFull_Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"OnTimeInFull_Orders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 103.68,
+          "width": 192.96,
+          "x": 247.68,
+          "y": 279.36,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
