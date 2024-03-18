@@ -620,6 +620,29 @@
             "lineageTag": "aea57025-7228-4f43-a50f-82b9b50b31bc",
             "sourceColumn": "On Time In Full",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Delivery_LeadTime",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "int64",
+            "expression": [
+              "",
+              "    fact_order_lines[actual_delivery_date] - fact_order_lines[agreed_delivery_date]"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "f18f65ad-15b8-4bc2-9828-b627f0461a4f",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "0dd25096-dff5-46fb-a383-46296d5c36b0",
