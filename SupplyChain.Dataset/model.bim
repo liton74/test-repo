@@ -797,10 +797,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "lineageTag": "a24c5b9f-dbf3-4653-83d7-ebe1a71bffbb",
