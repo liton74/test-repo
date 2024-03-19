@@ -18,7 +18,7 @@
   3. Select : Power BI Project (.pbip) save Options
   4. Ok
   5. Restart your Power BI
-  6. Open SupplyChain project file and update your Visuals
+  6. Open SupplyChain project file from D:\Test-Repo folder and update your Visuals
   7. Save file
   8. Go To GitHub Desktop
   9. Write something in Summary filed about your changes
