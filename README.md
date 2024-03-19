@@ -4,7 +4,7 @@
 
 # Invitation Accept 
   1. Accept Collaboratioon Invitation link from your mail
-  2. Click ### Code -> ### Open With GitHub Desktop
+  2. Click ###Code -> ###Open With GitHub Desktop
   3. Login your GitHub Account from GitHub Desktop
   4. Click Clone repository
   5. Set Repository Path > D:\Test-Repo
