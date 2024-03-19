@@ -21,6 +21,6 @@
   1. Open Power BI and update your Visuals
   2. Save Power BI file
   3. Go To GitHub Desktop
-  4. Write something in Summary file
-  5. Click Comit to Main
-  6. Click Push to Main <b> [Please inform me before PUSH COMMAND ] </b>
+  4. Write something in Summary file about your changes
+  5. Click Commit to Main
+  6. Click Push to Main <b> [Please inform me before PUSH COMMAND use] </b>
