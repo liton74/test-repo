@@ -63,12 +63,12 @@
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"4d0763692f77859f2ed4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":233.28,\"y\":5.76,\"z\":5000,\"width\":207.36,\"height\":97.92,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.InFull_Delivery\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"InFull_Orders\"},\"Name\":\"_Measure.InFull_Delivery\",\"NativeReferenceName\":\"Total Orders In Full\"}]},\"autoSelectVisualType\":true,\"columnProperties\":{\"_Measure.InFull_Delivery\":{\"displayName\":\"Total Orders In Full\"}},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"4d0763692f77859f2ed4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":233.4804753820034,\"y\":6.112054329371817,\"z\":5000,\"width\":206.5874363327674,\"height\":113.6842105263158,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measure.InFull_Delivery\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"InFull_Orders\"},\"Name\":\"_Measure.InFull_Delivery\",\"NativeReferenceName\":\"Total Orders In Full\"}]},\"autoSelectVisualType\":true,\"columnProperties\":{\"_Measure.InFull_Delivery\":{\"displayName\":\"Total Orders In Full\"}},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 97.92,
-          "width": 207.36,
-          "x": 233.28,
-          "y": 5.76,
+          "height": 113.68,
+          "width": 206.59,
+          "x": 233.48,
+          "y": 6.11,
           "z": 5000.00
         },
         {
