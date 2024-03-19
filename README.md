@@ -16,11 +16,9 @@
   3. Select : Power BI Project (.pbip) save Options
   4. Ok
   5. Restart your Power BI
-
-# After update Power BI file
-  1. Open Power BI and update your Visuals
-  2. Save Power BI file
-  3. Go To GitHub Desktop
-  4. Write something in Summary file about your changes
-  5. Click Commit to Main
-  6. Click Push to Main <b> [Please inform me before PUSH COMMAND use] </b>
+  6. Open SupplyChain project file and update your Visuals
+  7. Save file
+  8. Go To GitHub Desktop
+  9. Write something in Summary filed about your changes
+  10. Click Commit to Main
+  11. Click Push to Main <b> [Please inform me before PUSH COMMAND use] </b>
