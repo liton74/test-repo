@@ -23,4 +23,4 @@
   8. Go To GitHub Desktop
   9. Write something in Summary filed about your changes
   10. Click Commit to Main
-  11. Click Push to Main <b> [Please inform me before PUSH COMMAND use] </b>
+  11. Click Push Origin <b> [Please inform me before PUSH COMMAND use] </b>
