@@ -141,7 +141,7 @@
           "z": 4000.00
         },
         {
-          "config": "{\"name\":\"83c6350ffa749999273c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":775.0084889643464,\"y\":35.449915110356535,\"z\":1000,\"width\":381.3921901528014,\"height\":187.0288624787776,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"dim_products.category\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"}],\"Rows\":[{\"queryRef\":\"fact_order_lines.Delivery_LeadTime\",\"active\":true},{\"queryRef\":\"dim_customers.customer_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_products\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"category\"},\"Name\":\"dim_products.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":5},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Count of order_qty1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Delivery_LeadTime\"},\"Name\":\"fact_order_lines.Delivery_LeadTime\",\"NativeReferenceName\":\"Delivery_LeadTime\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"customer_name\"},\"Name\":\"dim_customers.customer_name\",\"NativeReferenceName\":\"customer_name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"fact_order_lines.Delivery_LeadTime\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order_lines\"}},\"Property\":\"Delivery_LeadTime\"}}],\"isPinned\":true},{\"queryRefs\":[\"dim_customers.customer_name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'BoldHeaderFlashyRows'\"}}}}}]}}}",
+          "config": "{\"name\":\"83c6350ffa749999273c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":775.0084889643464,\"y\":35.449915110356535,\"z\":1000,\"width\":381.3921901528014,\"height\":187.0288624787776,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Columns\":[{\"queryRef\":\"dim_products.category\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"}],\"Rows\":[{\"queryRef\":\"fact_order_lines.Delivery_LeadTime\",\"active\":true},{\"queryRef\":\"dim_customers.customer_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_products\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"category\"},\"Name\":\"dim_products.category\",\"NativeReferenceName\":\"category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":5},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Count of order_qty1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Delivery_LeadTime\"},\"Name\":\"fact_order_lines.Delivery_LeadTime\",\"NativeReferenceName\":\"Delivery_LeadTime\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"customer_name\"},\"Name\":\"dim_customers.customer_name\",\"NativeReferenceName\":\"customer_name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"fact_order_lines.Delivery_LeadTime\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order_lines\"}},\"Property\":\"Delivery_LeadTime\"}}],\"isPinned\":true},{\"queryRefs\":[\"dim_customers.customer_name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
           "height": 187.03,
           "width": 381.39,
@@ -180,14 +180,24 @@
       "width": 1280.00
     },
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}",
       "displayName": "Farhana Hoque",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "ReportSectionf42c19a65df235ee9733",
       "ordinal": 3,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b182385c30852db5a204\",\"layouts\":[{\"id\":0,\"position\":{\"x\":22.00339558573854,\"y\":80.67911714770798,\"z\":0,\"width\":190.6960950764007,\"height\":160.1358234295416,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"_Measure.Total_orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"},\"Name\":\"_Measure.Total_orders\",\"NativeReferenceName\":\"Total_orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 160.14,
+          "width": 190.70,
+          "x": 22.00,
+          "y": 80.68,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
