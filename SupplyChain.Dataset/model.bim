@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.126.1261.0 (24.02)"
+        "value": "2.122.746.0 (23.10)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -636,7 +636,7 @@
             ],
             "dataType": "int64",
             "expression": [
-              "",
+              "\r",
               "    fact_order_lines[actual_delivery_date] - fact_order_lines[agreed_delivery_date]"
             ],
             "formatString": "#,0",

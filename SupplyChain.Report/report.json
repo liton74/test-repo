@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -103,27 +103,6 @@
     },
     {
       "config": "{}",
-      "displayName": "Test_Debasish",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "ReportSection47573e2e5c7a35fdadfe",
-      "ordinal": 3,
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"5c6cc92b595988828eea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.08,\"y\":0,\"z\":0,\"width\":518.4,\"height\":384.48,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_products.product_name\"},{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"},{\"queryRef\":\"dim_products.category\"},{\"queryRef\":\"dim_customers.city\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_products\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"product_name\"},\"Name\":\"dim_products.product_name\",\"NativeReferenceName\":\"product_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Sum of order_qty\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"category\"},\"Name\":\"dim_products.category\",\"NativeReferenceName\":\"category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"city\"},\"Name\":\"dim_customers.city\",\"NativeReferenceName\":\"city\"}]},\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 384.48,
-          "width": 518.40,
-          "x": 10.08,
-          "y": 0.00,
-          "z": 0.00
-        }
-      ],
-      "width": 1280.00
-    },
-    {
-      "config": "{}",
       "displayName": "Dipongkar_Roy",
       "displayOption": 1,
       "filters": "[]",
@@ -131,6 +110,15 @@
       "name": "ReportSection4f311dc058e309122c20",
       "ordinal": 2,
       "visualContainers": [
+        {
+          "config": "{\"name\":\"6cc30b7fd51b9c41a3c6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":591.2860892388451,\"y\":36.95538057742782,\"z\":1,\"width\":688.7139107611548,\"height\":408.1889763779527,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customers.customer_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_order_lines.delivery_qty)\"},{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customers\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_name\"},\"Name\":\"dim_customers.customer_name\",\"NativeReferenceName\":\"customer_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"delivery_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.delivery_qty)\",\"NativeReferenceName\":\"Sum of delivery_qty\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Sum of order_qty\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"delivery_qty\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customers\"}},\"Property\":\"customer_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customers\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_name\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"d\",\"Entity\":\"dim_customers\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"customer_name\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 408.19,
+          "width": 688.71,
+          "x": 591.29,
+          "y": 36.96,
+          "z": 1.00
+        },
         {
           "config": "{\"name\":\"96cfb6dedd0b35fdfb5b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":66.7605633802817,\"y\":219.7183098591549,\"z\":0,\"width\":524.7887323943662,\"height\":279.71830985915494,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customers.city\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measure.Total_orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customers\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"city\"},\"Name\":\"dim_customers.city\",\"NativeReferenceName\":\"city\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"},\"Name\":\"_Measure.Total_orders\",\"NativeReferenceName\":\"Total_orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
