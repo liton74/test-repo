@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":6,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -151,13 +151,13 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"9ac5531a76f188909822\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.360655737704917,\"y\":21.85792349726776,\"z\":1001,\"width\":243.0601092896175,\"height\":138.14207650273224,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Sum of order_qty\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"9ac5531a76f188909822\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.360655737704917,\"y\":21.85792349726776,\"z\":2000,\"width\":243.0601092896175,\"height\":138.14207650273224,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Sum of order_qty\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
           "height": 138.14,
           "width": 243.06,
           "x": 18.36,
           "y": 21.86,
-          "z": 1001.00
+          "z": 2000.00
         }
       ],
       "width": 1280.00
@@ -259,7 +259,17 @@
       "height": 720.00,
       "name": "ReportSectionfd9170aa4eaaff816763",
       "ordinal": 6,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"567547ab57cc20445c26\",\"layouts\":[{\"id\":0,\"position\":{\"x\":335.30434782608694,\"y\":130.7826086956522,\"z\":0,\"width\":793.0434782608696,\"height\":470.2608695652174,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_customers.city\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measure.Total_orders\"},{\"queryRef\":\"_Measure.OnTime_Orders\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customers\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measure\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"city\"},\"Name\":\"dim_customers.city\",\"NativeReferenceName\":\"city\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"},\"Name\":\"_Measure.Total_orders\",\"NativeReferenceName\":\"Total_orders\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"OnTime_Orders\"},\"Name\":\"_Measure.OnTime_Orders\",\"NativeReferenceName\":\"OnTime_Orders\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Total_orders\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 470.26,
+          "width": 793.04,
+          "x": 335.30,
+          "y": 130.78,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
