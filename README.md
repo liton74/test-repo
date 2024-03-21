@@ -1,7 +1,7 @@
 # Please follow below steps for testing repository
 
 ## Dataset Folder Creation
-  1. Create a Dataset Folder in Drive D:\
+  1. Create a Dataset Folder in Drive C:\
   2. Keep all *.CSV file in this folder
 
 ## Invitation Acceptance & Others
