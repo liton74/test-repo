@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -96,6 +96,27 @@
           "width": 204.14,
           "x": 1050.05,
           "y": 103.90,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Test_Debasish",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection47573e2e5c7a35fdadfe",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5c6cc92b595988828eea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.08,\"y\":0,\"z\":0,\"width\":518.4,\"height\":384.48,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_products.product_name\"},{\"queryRef\":\"Sum(fact_order_lines.order_qty)\"},{\"queryRef\":\"dim_products.category\"},{\"queryRef\":\"dim_customers.city\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_products\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_order_lines\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_customers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"product_name\"},\"Name\":\"dim_products.product_name\",\"NativeReferenceName\":\"product_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"order_qty\"}},\"Function\":0},\"Name\":\"Sum(fact_order_lines.order_qty)\",\"NativeReferenceName\":\"Sum of order_qty\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"category\"},\"Name\":\"dim_products.category\",\"NativeReferenceName\":\"category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"city\"},\"Name\":\"dim_customers.city\",\"NativeReferenceName\":\"city\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 384.48,
+          "width": 518.40,
+          "x": 10.08,
+          "y": 0.00,
           "z": 0.00
         }
       ],
