@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.126.1261.0 (24.02)"
+        "value": "2.122.746.0 (23.10)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -100,10 +100,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -173,10 +169,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -284,10 +276,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -357,10 +345,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -428,6 +412,41 @@
           }
         ],
         "lineageTag": "8b932551-9b2f-475d-aaa4-daa45364e8e1",
+        "measures": [
+          {
+            "name": "In Full Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[infull_target%])",
+            "lineageTag": "a2274e96-ad8b-4342-afb5-b512bd921958"
+          },
+          {
+            "name": "On Time in Full Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[otif_target%])",
+            "lineageTag": "1f39e2bd-2da8-409a-b8d9-082e85f668bf"
+          },
+          {
+            "name": "On Time Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[ontime_target%])",
+            "lineageTag": "59ac9c7c-fa56-45fa-be9f-8ca12e40d5eb"
+          }
+        ],
         "partitions": [
           {
             "name": "dim_targets_orders",
@@ -452,10 +471,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -690,10 +705,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
