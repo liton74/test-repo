@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.122.746.0 (23.10)"
+        "value": "2.126.1261.0 (24.02)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -100,10 +100,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -173,11 +169,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-            "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -285,11 +276,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-            "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -359,11 +345,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-            "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -431,6 +412,41 @@
           }
         ],
         "lineageTag": "8b932551-9b2f-475d-aaa4-daa45364e8e1",
+        "measures": [
+          {
+            "name": "In Full Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[infull_target%])",
+            "lineageTag": "40a1e32d-fac5-42eb-b231-21d6997dec26"
+          },
+          {
+            "name": "On Time in Full Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[otif_target%])",
+            "lineageTag": "13681705-c347-493e-a7cf-12aabd40eab4"
+          },
+          {
+            "name": "On Time Target",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(dim_targets_orders[ontime_target%])",
+            "lineageTag": "408a123e-b624-4571-b042-35c01a40a98f"
+          }
+        ],
         "partitions": [
           {
             "name": "dim_targets_orders",
@@ -455,11 +471,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-            "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -694,11 +705,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-            "value": "Exception"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
