@@ -8,7 +8,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.122.746.0 (23.10)"
+        "value": "2.126.1261.0 (24.02)"
       },
       {
         "name": "PBI_QueryOrder",
@@ -412,41 +412,6 @@
           }
         ],
         "lineageTag": "8b932551-9b2f-475d-aaa4-daa45364e8e1",
-        "measures": [
-          {
-            "name": "In Full Target",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "expression": "AVERAGE(dim_targets_orders[infull_target%])",
-            "lineageTag": "40a1e32d-fac5-42eb-b231-21d6997dec26"
-          },
-          {
-            "name": "On Time in Full Target",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "expression": "AVERAGE(dim_targets_orders[otif_target%])",
-            "lineageTag": "13681705-c347-493e-a7cf-12aabd40eab4"
-          },
-          {
-            "name": "On Time Target",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
-            "expression": "AVERAGE(dim_targets_orders[ontime_target%])",
-            "lineageTag": "408a123e-b624-4571-b042-35c01a40a98f"
-          }
-        ],
         "partitions": [
           {
             "name": "dim_targets_orders",
@@ -576,11 +541,6 @@
                 "value": "Date"
               }
             ],
-            "changedProperties": [
-              {
-                "property": "DataType"
-              }
-            ],
             "dataType": "dateTime",
             "formatString": "Short Date",
             "lineageTag": "517bebfa-cf5f-46ac-8879-286d6f448d6a",
@@ -683,20 +643,6 @@
             "lineageTag": "f18f65ad-15b8-4bc2-9828-b627f0461a4f",
             "summarizeBy": "sum",
             "type": "calculated"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "agreed_delivery_date Hierarchy",
-            "levels": [
-              {
-                "name": "agreed_delivery_date",
-                "column": "agreed_delivery_date",
-                "lineageTag": "30e42079-c0d3-4c14-990c-407dcb2919a6",
-                "ordinal": 0
-              }
-            ],
-            "lineageTag": "e6d45cdf-3f41-4c08-ae5c-f973b82c5454"
           }
         ],
         "lineageTag": "0dd25096-dff5-46fb-a383-46296d5c36b0",
