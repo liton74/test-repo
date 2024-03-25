@@ -1,2 +1,6 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+SupplyChain.Report/report.json
+SupplyChain.Dataset/model.bim
+/SupplyChain.Dataset
+*.bim
